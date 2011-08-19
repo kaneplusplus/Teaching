@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{Sweave}
+\usepackage{accents}
+
+% New from euler:
+\usepackage{ae}
+\usepackage{color}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{setspace}
+
+\topmargin=-0.5in
+\textheight=9in
+\textwidth=6.5in
+\oddsidemargin=0in
+
+%\usepackage{CJK}
+%\usepackage{pinyin}
+\def\E{\mathord{I\kern-.35em E}}
+\def\R{\mathord{I\kern-.35em R}}
+\def\P{\mathord{I\kern-.35em P}}
+\def\I{\mathord{1\kern-.35em 1}}
+\def\wt{\mathord{\widehat{\theta}}}
+
+\newcommand{\proglang}[1]{\textbf{#1}}
+\newcommand{\pkg}[1]{\texttt{\textsl{#1}}}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\mg}[1]{{\textcolor {magenta} {#1}}}
+\newcommand{\gr}[1]{{\textcolor {green} {#1}}}
+\newcommand{\bl}[1]{{\textcolor {blue} {#1}}}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{myexplore}[thm]{Explore}
+\newtheorem{mybackground}[thm]{Background}
+\newtheorem{myquestion}[thm]{Question}
+\newtheorem{myexample}[thm]{Example}
+\newtheorem{mydefinition}[thm]{Definition}
+\newtheorem{mytheorem}[thm]{Theorem}
+
+\pagestyle{myheadings}    % Go for customized headings
+\markboth{notused left title}{Michael Kane, Department of Statistics, Yale University \copyright 2010}
+\newcommand{\sekshun}[1]                % In 'article' only the page
+        {                               % number appears in the header.
+        \section{#1}                    % I want the section name AND
+        \markboth{#1 \hfill}{#1 \hfill} % the page, so I need a new kind
+        }                               % of '\sekshun' command. 
+
+
+\begin{document}
+
+\doublespace
+
+\setkeys{Gin}{width=1.0\textwidth} 
+
+
+
+\begin{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{\Large\bf STAT 625: Case Studies\\
+\vspace*{0.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Homework Due Thursday, September 23\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{center}
+
+\begin{raggedright}
+\parindent=0.5in
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{The \proglang{Python} Challenge... in \proglang{R}}
+
+The \href{http://www.pythonchallenge.com}{Python Challenge} website contains
+a series of ``programming riddles'' that provide an entertaining way
+of exploring the \proglang{Python} programming language.  
+However, the challenges are not \proglang{Python} specific and 
+any modern programming language can be used to create a solution,
+including \proglang{R}.
+For Homework 2, solve challenges 1 through 4 using \proglang{R} and 
+write a short report describing 
+your solutions.  You may work in teams of 2 and you should be ready to 
+describe your solutions on the due date, September 23.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{raggedright}
+
+\end{document}

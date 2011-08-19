@@ -1,0 +1,27 @@
+library(XML)
+
+url <- "http://www.madmoneyrecap.com/madmoney_nightlyrecap_100826_2.htm"
+doc <- htmlParse(url, error=function(...){})
+nodes <- getNodeSet(doc, '//table[@border="1"]')[[1]]
+
+n <- getNodeSet(nodes, './/a[concat(@title, @href, @target)]')
+
+n <- n[-seq(2, length(n), 2)]
+
+# Get the stocks.
+symbols <- c()
+for (i in 1:length(n))
+{
+  testUrl <- xmlGetAttr(n[[i]], 'href')
+  if (length(grep('http://finance.yahoo.com/q', testUrl)) > 0)
+    symbols <- c(symbols, unlist(strsplit(testUrl, "="))[2])
+}
+
+# Get the recommendations.
+nodes <- getNodeSet(doc, '//img[starts-with(@src, "icon_thm2_")]')
+recommend <- rep(FALSE, length(nodes))
+for (i in 1:length(nodes))
+{
+  if (xmlGetAttr(nodes[[i]], 'src') == "icon_thm2_up.gif")
+    recommend[i] <- TRUE
+}
