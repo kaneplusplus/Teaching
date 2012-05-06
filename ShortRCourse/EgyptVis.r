@@ -14,10 +14,18 @@ outBreakMap <- gvisMap(x[x$speciesDescription=="Human",],
 
 plot(outBreakMap)
 
-x <- read.csv("H5N1Egypt_2006_2011FULL.csv", as.is=TRUE)
-names(x)
-names(x)[6] <- "gov"
-x$gov[x$gov == "aswan"] <- "Aswan"
-x <- x[x$gov == "Cairo" | x$gov == "Matruh" | x$gov == "Aswan", ]
+x <- read.csv("EgyptOutbreakData.csv")
+x <- x[grep("2011", x$date),]
+x$date <- as.Date(x$date)
+y1 <- x[,c("human", "date", "temp", "humidity")]
+names(y1)[1] <- "outbreak"
+y2 <- x[,c("bird", "date", "temp", "humidity")]
+names(y2)[1] <- "outbreak"
+y1$species <- "human"
+y2$species <- "bird"
+y <- rbind(y1, y2)
+y <- y[,c("species", "date", "outbreak", "temp", "humidity")]
+plot(gvisMotionChart(y, idvar="species", timevar="date"))
 
-strptime(x$observationDate, format="%d/%m/%Y")
+plot(gvisMotionChart(Fruits, idvar="Fruit", timevar="Year"))
+
