@@ -1,0 +1,153 @@
+\documentclass[12pt]{article}
+
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{Sweave}
+\usepackage{accents}
+
+% New from euler:
+\usepackage{ae}
+\usepackage{color}
+\usepackage{url}
+
+\topmargin=-0.5in
+\textheight=9in
+\textwidth=6.5in
+\oddsidemargin=0in
+
+%\usepackage{CJK}
+%\usepackage{pinyin}
+\def\E{\mathord{I\kern-.35em E}}
+\def\R{\mathord{I\kern-.35em R}}
+\def\P{\mathord{I\kern-.35em P}}
+\def\I{\mathord{1\kern-.35em 1}}
+\def\wt{\mathord{\widehat{\theta}}}
+
+\newcommand{\proglang}[1]{\textbf{#1}}
+\newcommand{\pkg}[1]{\texttt{\textsl{#1}}}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\mg}[1]{{\textcolor {magenta} {#1}}}
+\newcommand{\gr}[1]{{\textcolor {green} {#1}}}
+\newcommand{\bl}[1]{{\textcolor {blue} {#1}}}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{myexplore}[thm]{Explore}
+\newtheorem{mybackground}[thm]{Background}
+\newtheorem{myquestion}[thm]{Question}
+\newtheorem{myexample}[thm]{Example}
+\newtheorem{mydefinition}[thm]{Definition}
+\newtheorem{mytheorem}[thm]{Theorem}
+
+\pagestyle{myheadings}    % Go for customized headings
+\markboth{notused left title}{Michael J. Kane, Yale University \copyright 2013}
+\newcommand{\sekshun}[1]                % In 'article' only the page
+        {                               % number appears in the header.
+        \section{#1}                    % I want the section name AND
+        \markboth{#1 \hfill}{#1 \hfill} % the page, so I need a new kind
+        }                               % of '\sekshun' command. 
+
+
+\begin{document}
+
+\setkeys{Gin}{width=1.0\textwidth} 
+
+
+
+\begin{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{\Large\bf BIS 578: Statistical Consulting\\
+\vspace*{0.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Syllabus, Spring 2013\\
+\vspace*{0.5cm}
+Michael J. Kane\\
+Yale University
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace*{1cm}
+
+
+\end{center}
+
+\begin{raggedright}
+\parindent=0.5in
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Course Description}
+
+This class offers the chance for students to gain experience and practical
+knowledge working as a biostatistician in a ``real-world'' setting.  Students
+collaborate with an investigator, designing and implementing statistical tests
+to further clinical research efforts, all under the supervision of the
+instructor.  The class prepares students for further, unsupervised 
+collaborations in their careers as biostatisticians.
+
+\section{Learning Objectives}
+
+\begin{enumerate}
+\item Work with an investigator to understand the goals of a clinical study.
+\item Contribute to a clinical study by designing and implementing statistical
+  tests that answer questions posed by the study.
+\item Gain experience in data cleaning, exploring, and analyzing a 
+  ``real-world'' data set.
+\item Summarize results and finding of statistical investigations and present
+  these results in reports and presentations.
+\end{enumerate}
+
+\section{Prerequisite}
+
+This class assumes that you are comfortable manipulating and visualization
+data.  Furthermore, you be able to perform basic statistical tests,
+run linear and generalized linear models, and understand the results.
+You should have taken BIS 505 A/B or CDE 508 before taking this class, or
+you will need to get the instructor's approval.
+
+\section{Classes}
+
+For the first two weeks of the semester students will meet twice a week for
+lectures covering the development of research hypotheses, human subject 
+protection, and determining sample size in statistical experiments -- vital
+skills for any biostatistician working in a clinical setting.  Beginning 
+in the third week students will begin collaborating with researchers in 
+clinical investigations.  Students will meet with an instructor and
+investigator weekly to give progress reports and receive guidance.
+Additionally, students will sit in the research and design clinics
+as well as the analytics clinics offered by the Yale Center for Analytical
+Sciences.
+
+\section{Grades}
+
+Grades are determined by the student's ability to understand their assigned
+investigation along with its goals; engage and contribute to the investigation;
+and collaborate with the clinician to produce cutting-edge research results.
+In the first week of class homework will be assigned to reinforce the 
+materials presented in the lectures.  For rest of the semester students
+will present their findings weekly to both the instructor and investigator.
+Finally, students will provide written reports detailing their collaboration
+with the clinical investigator.
+
+\section{Schedule}
+
+\begin{itemize}
+\item Lecture 1: Developing research hypotheses and human subject protection
+\item Lecture 2: Sample size (overview and theory)
+\item Lecture 3: Sample size (user's guide)
+\item Lecture 4: Investigations are presented and selected
+\item Lectures 5-20: Present findings to investigator and instructor; and 
+  attend research and design, and analytics clinics.
+\item Final Presentation
+\end{itemize}
+
+\end{raggedright}
+
+\end{document}
